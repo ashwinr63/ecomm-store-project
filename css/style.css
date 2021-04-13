@@ -1,1 +1,73 @@
 /* Note there a few "reset" styles given in reset.css. Review those before you begin */
+
+/* The common stylesheet for the entire html pages*/
+*{
+    box-sizing: border-box;
+}
+
+html {
+    border: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Header */
+
+.page-header {
+
+}
+/* Logo */
+.logo {
+    font-family: cursive;
+    display: flex;
+    font-size: larger;   
+    justify-content: Left;
+    background-color: brown;
+    color:cornsilk;
+}
+
+/* Logo Image */
+.logo > img {
+    float: left;
+    width: 14px;
+    height: 14px;
+    position: relative;
+}
+
+/* Menu Options */
+.navigation {
+    display: ;
+}
+
+.submenu:hover {
+    display: block;
+
+}
+/* Your Products */
+
+.your-product {
+    
+}
+
+/* page footer */
+.social {
+    display: flex;
+    justify-content: flex-end;
+    margin: auto;
+    padding: auto;
+    list-style-type: disc;
+}
+
+/* copyright */
+.copyright {
+    text-align: right;
+}

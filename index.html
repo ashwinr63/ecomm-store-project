@@ -3,16 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Document title]</title>
+    <title></title>
     <meta name="description" content="[A short description of this site for SEO]">
     <meta name="author" content="Ashwin">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a href="index.html" class="logo">Dosa Corner<!-- Site logo --></a>
+      <a href="index.html" class="logo">Shelby Autos<img src="./img/Shelby_Logo.png" alt="logo"><!-- Site logo --></a>
 
       <!-- Navigation menu and toggle button (non-functional) -->
       <button type="button" class="nav-toggle">
@@ -20,11 +21,11 @@
       </button>
       <nav aria-label="Primary" class="navigation">
         <ul class="menu">
-          <li><a href="#">Shop</a>
+          <li><a href="#">Shop Cars</a>
             <ul class="submenu">
-              <li><a href="#">Subcategory</a></li>
-              <li><a href="#">Subcategory</a></li>
-              <li><a href="#">Subcategory</a></li>
+              <li><a href="#">LowEnd</a></li>
+              <li><a href="#">MidEnd</a></li>
+              <li><a href="#">HighEnd</a></li>
             </ul>
           </li>
           <li><a href="#">About</a></li>
@@ -49,7 +50,7 @@
 
     <main class="products">
       <header class="heading">
-        <h1>Sale on [Category Name]</h1>
+        <h1>Sale on Cars</h1>
       </header>
 
       <!-- Filtering product form -->
@@ -68,13 +69,13 @@
             </ul>
           </fieldset>
           <fieldset>
-            <legend>Sizes</legend>
+            <legend>Types</legend>
             <ol class="filter-list">
-              <li><input type="checkbox" name="size" value="xs" id="xs"> <label for="xs">XS</label></li>
-              <li><input type="checkbox" name="size" value="sm" id="sm"> <label for="sm">S</label></li>
-              <li><input type="checkbox" name="size" value="md" id="md"> <label for="md">M</label></li>
-              <li><input type="checkbox" name="size" value="lg" id="lg"> <label for="lg">L</label></li>
-              <li><input type="checkbox" name="size" value="xl" id="xl"> <label for="xl">XL</label></li>
+              <li><input type="checkbox" name="size" value="xs" id="xs"> <label for="xs">Petrol</label></li>
+              <li><input type="checkbox" name="size" value="sm" id="sm"> <label for="sm">Diesel</label></li>
+              <li><input type="checkbox" name="size" value="md" id="md"> <label for="md">Hydrogen</label></li>
+              <li><input type="checkbox" name="size" value="lg" id="lg"> <label for="lg">Hybrid</label></li>
+              <li><input type="checkbox" name="size" value="xl" id="xl"> <label for="xl">Electric</label></li>
             </ol>
           </fieldset>
           <fieldset>
@@ -125,7 +126,7 @@
           <header>
             <img src="img/product.jpg" alt="Product Image">
             <h3>Product Name</h3>
-            <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
+            <data value="20k"><del>$50k</del> <ins>20K</ins></data>
             <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
             <dl>
               <dt>Rating</dt>
@@ -143,11 +144,11 @@
               </ul>
             </fieldset>
             <fieldset>
-              <legend>Sizes</legend>
+              <legend>Types</legend>
               <ol>
-                <li><label><input type="radio" name="size" value="m"> M</label></li>
-                <li><label><input type="radio" name="size" value="l"> L</label></li>
-                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
+                <li><label><input type="radio" name="type" value="d"> D</label></li>
+                <li><label><input type="radio" name="type" value="p"> P</label></li>
+                <li><label><input type="radio" name="type" value="e"> E</label></li>
               </ol>
             </fieldset>
           </form>
@@ -162,7 +163,7 @@
           <header>
             <img src="img/product.jpg" alt="Product Image">
             <h3>Product Name</h3>
-            <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
+            <data value="20k"><del>$50k</del> <ins>20K</ins></data>
             <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
             <dl>
               <dt>Rating</dt>
@@ -180,11 +181,11 @@
               </ul>
             </fieldset>
             <fieldset>
-              <legend>Sizes</legend>
+              <legend>Types</legend>
               <ol>
-                <li><label><input type="radio" name="size" value="m"> M</label></li>
-                <li><label><input type="radio" name="size" value="l"> L</label></li>
-                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
+                <li><label><input type="radio" name="type" value="d"> D</label></li>
+                <li><label><input type="radio" name="type" value="p"> P</label></li>
+                <li><label><input type="radio" name="type" value="e"> E</label></li>
               </ol>
             </fieldset>
           </form>
@@ -195,11 +196,11 @@
         </article>
 
         <!-- Product 3 -->
-        <article class="product">
+         <article class="product">
           <header>
             <img src="img/product.jpg" alt="Product Image">
             <h3>Product Name</h3>
-            <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
+            <data value="20k"><del>$50k</del> <ins>20K</ins></data>
             <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
             <dl>
               <dt>Rating</dt>
@@ -217,11 +218,11 @@
               </ul>
             </fieldset>
             <fieldset>
-              <legend>Sizes</legend>
+              <legend>Types</legend>
               <ol>
-                <li><label><input type="radio" name="size" value="m"> M</label></li>
-                <li><label><input type="radio" name="size" value="l"> L</label></li>
-                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
+                <li><label><input type="radio" name="type" value="d"> D</label></li>
+                <li><label><input type="radio" name="type" value="p"> P</label></li>
+                <li><label><input type="radio" name="type" value="e"> E</label></li>
               </ol>
             </fieldset>
           </form>
@@ -232,11 +233,11 @@
         </article>
   
         <!-- Product 4 -->
-        <article class="product">
+         <article class="product">
           <header>
             <img src="img/product.jpg" alt="Product Image">
             <h3>Product Name</h3>
-            <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
+            <data value="20k"><del>$50k</del> <ins>20K</ins></data>
             <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
             <dl>
               <dt>Rating</dt>
@@ -254,11 +255,11 @@
               </ul>
             </fieldset>
             <fieldset>
-              <legend>Sizes</legend>
+              <legend>Types</legend>
               <ol>
-                <li><label><input type="radio" name="size" value="m"> M</label></li>
-                <li><label><input type="radio" name="size" value="l"> L</label></li>
-                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
+                <li><label><input type="radio" name="type" value="d"> D</label></li>
+                <li><label><input type="radio" name="type" value="p"> P</label></li>
+                <li><label><input type="radio" name="type" value="e"> E</label></li>
               </ol>
             </fieldset>
           </form>
@@ -269,11 +270,11 @@
         </article>
 
         <!-- Product 5 -->
-        <article class="product">
+         <article class="product">
           <header>
             <img src="img/product.jpg" alt="Product Image">
             <h3>Product Name</h3>
-            <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
+            <data value="20k"><del>$50k</del> <ins>20K</ins></data>
             <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
             <dl>
               <dt>Rating</dt>
@@ -291,11 +292,11 @@
               </ul>
             </fieldset>
             <fieldset>
-              <legend>Sizes</legend>
+              <legend>Types</legend>
               <ol>
-                <li><label><input type="radio" name="size" value="m"> M</label></li>
-                <li><label><input type="radio" name="size" value="l"> L</label></li>
-                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
+                <li><label><input type="radio" name="type" value="d"> D</label></li>
+                <li><label><input type="radio" name="type" value="p"> P</label></li>
+                <li><label><input type="radio" name="type" value="e"> E</label></li>
               </ol>
             </fieldset>
           </form>
@@ -306,11 +307,11 @@
         </article>
 
         <!-- Product 6 -->
-        <article class="product">
+         <article class="product">
           <header>
             <img src="img/product.jpg" alt="Product Image">
             <h3>Product Name</h3>
-            <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
+            <data value="20k"><del>$50k</del> <ins>20K</ins></data>
             <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
             <dl>
               <dt>Rating</dt>
@@ -328,17 +329,17 @@
               </ul>
             </fieldset>
             <fieldset>
-              <legend>Sizes</legend>
+              <legend>Types</legend>
               <ol>
-                <li><label><input type="radio" name="size" value="m"> M</label></li>
-                <li><label><input type="radio" name="size" value="l"> L</label></li>
-                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
+                <li><label><input type="radio" name="type" value="d"> D</label></li>
+                <li><label><input type="radio" name="type" value="p"> P</label></li>
+                <li><label><input type="radio" name="type" value="e"> E</label></li>
               </ol>
             </fieldset>
           </form>
           <footer>
             <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-            <button type="button"><span class="material-icons">favorite</span></button>
+            <button type="button"><span class="fas fa-favorite">favorite</span></button>
           </footer>
         </article>
       </section>
