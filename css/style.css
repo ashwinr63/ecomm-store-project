@@ -1,73 +1,39 @@
 /* Note there a few "reset" styles given in reset.css. Review those before you begin */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 /* The common stylesheet for the entire html pages*/
-*{
-    box-sizing: border-box;
-}
 
-html {
-	--primary-col: #ff3366;    /* main colour */
-	--primary-alt: #ff6699;    /* variant */
-	--primary-on: #ffffff;     /* for text or icons */
-	--secondary-col: #3399ff;
-	--secondary-alt: #99ccff;
-	--secondary-on: #000000;
-	/* etc, etc... */
-    border: 0;
-    margin: 0;
-    --pad-and-gap: 1em;
-}
-
-body {
-    margin: 0;
-    border: 0;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1em;
-    color: var(--secondary-on);
-}
-
-img {
-    max-width: 100%;
-}
-
+/* ====Header Styling with Log */
 /* Header */
-.products {
-    display: flex;
-    padding-left: var(--pad-and-gap);
-    padding-right: var(--pad-and-gap);
-}
-/* Logo */
-.logo {
-    display: flex;   
-    justify-content: center;
-    background-color: brown;
-    color:cornsilk;
-    background-repeat: no-repeat;
-}
-
 /* Menu Options */
 .page-header {
-    padding-left: var(--pad-and-gap);
-    padding-right: var(--pad-and-gap);
+    display: flex;
+}
+.nav-toggle {
+    display: inline;
+}
+.navigation {
+    display: block;
 }
 
-/* Navigation */
+/* Products */
 
-
-.submenu:hover {
+.products {
     display: block;
+    margin: 1em;
+    
+}
 
+/* --Results-- */
+.results {
+    display: inline;
 }
 /* Your Products */
-.your-product {
-    display: flex;
+.product {
+    display: inline-block;
+    border: 1px solid black;
+    margin: 1em;
 }
-
 /* Pagination */
-.pagination {
-    text-align: center;
-    display: flex;
-}
 
 .pages {
     display: flex;
@@ -76,7 +42,7 @@ img {
 
 .pages > li {
     margin: calc(var(--pad-and-gap)/2);
-
+    
 }
 
 /* page footer */

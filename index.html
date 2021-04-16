@@ -3,22 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Car Store</title>
     <meta name="description" content="[A short description of this site for SEO]">
     <meta name="author" content="Ashwin">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a href="index.html" class="logo"><img src="./img/Shelby_Logo.png" alt="logo"><!-- Site logo --></a>
-
+      <div class="logo">
+        <a href="index.html" class="logo"><img src="./img/Shelby_Logo.png" alt="logo"><!-- Site logo --></a>
+      </div>
       <!-- Navigation menu and toggle button (non-functional) -->
       <button type="button" class="nav-toggle">
-        <span class="material-icons">Menu</span>
+        <span class="fa fa-bars" aria-hidden="true"></span>
       </button>
+
+      <!-- Navigation Menu -->
       <nav aria-label="Primary" class="navigation">
         <ul class="menu">
           <li><a href="#">Shop Cars</a>
@@ -32,20 +34,24 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
-
+      <div class="search-product">
       <!-- Search for a product (non-functional) -->
+      
       <form class="search">
         <label>Search
           <input type="search" name="find" id="find">
         </label>
-        <button type="button"><span class="material-icons">search</span></button>
+        <button type="button"><span class="fa fa-search fa-2x"></span></button>
       </form>
-
-      <!-- Additional links -->
-      <ul class="your-products">
-        <li><a href="#"><span class="material-icons" aria-label="Favourites">favorite_border</span></a></li>
-        <li><a href="#"><span class="material-icons" aria-label="Items in your cart">shopping_cart</span></a></li>
-      </ul>
+      </div>
+      <div class="carts">
+        <!-- Additional links -->
+        <ul class="your-products">
+          <li><a href="#"><span class="fas fa-heart" aria-label="Favourites"></span></a></li>
+          <li><a href="#"><span class="fa fas fa-shopping-cart" aria-label="Items in your cart"></span></a></li>
+        </ul>
+      </div>
+      
     </header>
 
     <main class="products">
@@ -84,25 +90,25 @@
               <li>
                 <input type="radio" name="rating" value="4" id="aboveFour">
                 <label for="aboveFour">
-                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span>
+                  <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="far fa-star"></span>
                 </label>
               </li>
               <li>
                 <input type="radio" name="rating" value="3" id="aboveThree">
                 <label for="aboveThree">
-                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+                  <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="far fa-star"></span><span class="far fa-star"></span>
                 </label>
               </li>
               <li>
                 <input type="radio" name="rating" value="2" id="aboveTwo">
                 <label for="aboveTwo">
-                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+                  <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="far fa-star"></span><span class="far fa-star"></span><span class="far fa-star"></span>
                 </label>
               </li>
               <li>
                 <input type="radio" name="rating" value="1" id="aboveOne">
                 <label for="aboveOne">
-                  <span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+                  <span class="fas fa-star"></span><span class="far fa-star"></span><span class="far fa-star"></span><span class="far fa-star"></span><span class="far fa-star"></span>
                 </label>
               </li>
             </ol>
@@ -130,11 +136,11 @@
             <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
             <dl>
               <dt>Rating</dt>
-              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-            </dl>
+              <dd>4.4 <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star-half"></dd>
+            </dl> 
             <a href="#">see more</a>
           </header>
-          <form>
+          <form class="filter-set">
             <fieldset>
               <legend>Colours</legend>
               <ul>
@@ -153,21 +159,21 @@
             </fieldset>
           </form>
           <footer>
-            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-            <button type="button"><span class="material-icons">favorite</span></button>
+            <button type="button"><span class="fa fas fa-shopping-cart"></span> Add to Cart</button>
+            <button type="button"><span class="fas fa-heart"></span></button>
           </footer>
         </article>
 
         <!-- Product 2 -->
         <article class="product">
           <header>
-            <img src="img/Honda_Civic_1.jpg" alt="Product Image">
+            <img src="img/Mazda_CX-30.jpg" alt="Product Image">
             <h3>Product Name</h3>
             <data value="20k"><del>$50k</del> <ins>20K</ins></data>
             <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
             <dl>
               <dt>Rating</dt>
-              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+              <dd>4.4 <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star-half"></dd>
             </dl>
             <a href="#">see more</a>
           </header>
@@ -190,21 +196,21 @@
             </fieldset>
           </form>
           <footer>
-            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-            <button type="button"><span class="material-icons">favorite</span></button>
+            <button type="button"><span class="fa fas fa-shopping-cart"></span> Add to Cart</button>
+            <button type="button"><span class="fas fa-heart"></span></button>
           </footer>
         </article>
 
         <!-- Product 3 -->
          <article class="product">
           <header>
-            <img src="img/Honda_Civic_1.jpg" alt="Product Image">
+            <img src="img/Toyota Camry.jpg" alt="Product Image">
             <h3>Product Name</h3>
             <data value="20k"><del>$50k</del> <ins>20K</ins></data>
             <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
             <dl>
               <dt>Rating</dt>
-              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+              <dd>4.4 <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star-half"></dd>
             </dl>
             <a href="#">see more</a>
           </header>
@@ -227,21 +233,21 @@
             </fieldset>
           </form>
           <footer>
-            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-            <button type="button"><span class="material-icons">favorite</span></button>
+            <button type="button"><span class="fa fas fa-shopping-cart"></span> Add to Cart</button>
+            <button type="button"><span class="fas fa-heart"></span></button>
           </footer>
         </article>
   
         <!-- Product 4 -->
          <article class="product">
           <header>
-            <img src="img/Honda_Civic_1.jpg" alt="Product Image">
+            <img src="img/toyota-corolla.jpg" alt="Product Image">
             <h3>Product Name</h3>
             <data value="20k"><del>$50k</del> <ins>20K</ins></data>
             <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
             <dl>
               <dt>Rating</dt>
-              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+              <dd>4.4 <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star-half"></dd>
             </dl>
             <a href="#">see more</a>
           </header>
@@ -264,21 +270,21 @@
             </fieldset>
           </form>
           <footer>
-            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-            <button type="button"><span class="material-icons">favorite</span></button>
+            <button type="button"><span class="fa fas fa-shopping-cart"></span> Add to Cart</button>
+            <button type="button"><span class="fas fa-heart"></span></button>
           </footer>
         </article>
 
         <!-- Product 5 -->
          <article class="product">
           <header>
-            <img src="img/Honda_Civic_1.jpg" alt="Product Image">
+            <img src="img/Toyota_Rav4.jpg" alt="Product Image">
             <h3>Product Name</h3>
             <data value="20k"><del>$50k</del> <ins>20K</ins></data>
             <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
             <dl>
               <dt>Rating</dt>
-              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+              <dd>4.4 <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star-half"></dd>
             </dl>
             <a href="#">see more</a>
           </header>
@@ -301,21 +307,21 @@
             </fieldset>
           </form>
           <footer>
-            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-            <button type="button"><span class="material-icons">favorite</span></button>
+            <button type="button"><span class="fa fas fa-shopping-cart"></span> Add to Cart</button>
+            <button type="button"><span class="fas fa-heart"></span></button>
           </footer>
         </article>
 
         <!-- Product 6 -->
          <article class="product">
           <header>
-            <img src="img/Honda_Civic_1.jpg" alt="Product Image">
+            <img src="img/Toyota_Acura_1.jpg" alt="Product Image">
             <h3>Product Name</h3>
             <data value="20k"><del>$50k</del> <ins>20K</ins></data>
             <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
             <dl>
               <dt>Rating</dt>
-              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+              <dd>4.4 <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star-half"></span></dd>
             </dl>
             <a href="#">see more</a>
           </header>
@@ -338,8 +344,8 @@
             </fieldset>
           </form>
           <footer>
-            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-            <button type="button"><span class="material-icons">favorite</span></button>
+            <button type="button"><span class="fa fas fa-shopping-cart"></span> Add to Cart</button>
+            <button type="button"><span class="fas fa-heart"></span></button>
           </footer>
         </article>
       </section>
@@ -358,9 +364,9 @@
 
     <footer class="page-footer">
       <ul class="social">
-        <li><a href="#"><span class="material-icons">face</span> Facebook</a></li>
-        <li><a href="#"><span class="material-icons">camera_alt</span> Instagram</a></li>
-        <li><a href="#"><span class="material-icons">alternate_email</span> Twitter</a></li>
+        <li><a href="#"><span class="fab fa-facebook"></span></a></li>
+        <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
       </ul>
       <nav aria-label="Legal">
         <ul class="legal">
