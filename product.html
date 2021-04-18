@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Store</title>
+    <meta name="description" content="[A short description of this site for SEO]">
+    <meta name="author" content="Ashwin">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="logo">
+        <a href="index.html" class="logo"><img src="./img/Shelby_Logo.png" alt="logo"><!-- Site logo --></a>
+      </div>
+      <!-- Navigation menu and toggle button (non-functional) -->
+      <button type="button" class="nav-toggle">
+        <span class="fa fa-bars" aria-hidden="true"></span>
+      </button>
+
+      <!-- Navigation Menu -->
+      <nav aria-label="Primary" class="navigation">
+        <ul class="menu">
+          <li><a href="#">Shop Cars</a>
+            <ul class="submenu">
+              <li><a href="#">LowEnd</a></li>
+              <li><a href="#">MidEnd</a></li>
+              <li><a href="#">HighEnd</a></li>
+            </ul>
+          </li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="search-product">
+      <!-- Search for a product (non-functional) -->
+      
+      <form class="search">
+        <label>Search
+          <input type="search" name="find" id="find">
+        </label>
+        <button type="button"><span class="fa fa-search fa-2x"></span></button>
+      </form>
+      </div>
+      <div class="carts">
+        <!-- Additional links -->
+        <ul class="your-products">
+          <li><a href="#"><span class="fas fa-heart" aria-label="Favourites"></span></a></li>
+          <li><a href="#"><span class="fa fas fa-shopping-cart" aria-label="Items in your cart"></span></a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="gallery" id="gallery">
+        <img src="img/one.jpg" alt="Lava from a volcano" class="bigimg" id="bigimg">
+        <img src="img/one.jpg" alt="Lava from a volcano" id="thumb1" class="thumb">
+        <img src="img/two.jpg" alt="The moon above the clouds" id="thumb2" class="thumb">
+        <img src="img/three.jpg" alt="Overhead view of a forest" id="thumb3" class="thumb">
+    </main>
+</body>
+</html>

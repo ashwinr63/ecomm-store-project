@@ -13,12 +13,14 @@
   <body>
     <header class="page-header">
       <div class="logo">
-        <a href="index.html" class="logo"><img src="./img/Shelby_Logo.png" alt="logo"><!-- Site logo --></a>
+        <a href="index.html" class="logo"><img src="./img/Asset 1.png" alt="logo"><!-- Site logo --></a>
       </div>
       <!-- Navigation menu and toggle button (non-functional) -->
-      <button type="button" class="nav-toggle">
-        <span class="fa fa-bars" aria-hidden="true"></span>
-      </button>
+      <div class="nav-toggle-container">
+        <button type="button" class="nav-toggle">
+          <span class="fa fa-bars" aria-hidden="true"></span>
+        </button>
+      </div>
 
       <!-- Navigation Menu -->
       <nav aria-label="Primary" class="navigation">
@@ -44,26 +46,26 @@
         <button type="button"><span class="fa fa-search fa-2x"></span></button>
       </form>
       </div>
-      <div class="carts">
         <!-- Additional links -->
         <ul class="your-products">
           <li><a href="#"><span class="fas fa-heart" aria-label="Favourites"></span></a></li>
           <li><a href="#"><span class="fa fas fa-shopping-cart" aria-label="Items in your cart"></span></a></li>
+          <li><a href="#"><span class="far fa-user-circle" aria-label="UserLogin"></span></a></li>
         </ul>
-      </div>
-      
     </header>
-
     <main class="products">
       <header class="heading">
-        <h1>Sale</h1>
+        <h1>Sale of Cars</h1>
       </header>
 
       <!-- Filtering product form -->
       <form class="filters">
         <h2>Filters</h2>
-
+        <button type="button" class="nav-toggle">
+          <span class="fa fa-bars" aria-hidden="true"></span>
+        </button>
         <div class="filter-options">
+          
           <fieldset>
             <legend>Colour</legend>
             <ul class="filter-list">
@@ -113,7 +115,6 @@
               </li>
             </ol>
           </fieldset>
-        </div>
         <fieldset>
           <label for="sort">Show</label>
           <select name="sort" id="sort">
@@ -122,6 +123,7 @@
             <option value="latest">Latest Arrivals</option>
           </select>
         </fieldset>
+      </div>
       </form>
 
       <section class="results">
@@ -138,7 +140,7 @@
               <dt>Rating</dt>
               <dd>4.4 <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star-half"></dd>
             </dl> 
-            <a href="#">see more</a>
+            <a href="./product.html">see more</a>
           </header>
           <form class="filter-set">
             <fieldset>
@@ -152,9 +154,9 @@
             <fieldset>
               <legend>Types</legend>
               <ol>
-                <li><label><input type="radio" name="type" value="d"> D</label></li>
-                <li><label><input type="radio" name="type" value="p"> P</label></li>
-                <li><label><input type="radio" name="type" value="e"> E</label></li>
+                <li><label><input type="radio" name="type" value="d"> Diesel</label></li>
+                <li><label><input type="radio" name="type" value="p"> Petrol</label></li>
+                <li><label><input type="radio" name="type" value="e"> Electric</label></li>
               </ol>
             </fieldset>
           </form>
@@ -189,9 +191,9 @@
             <fieldset>
               <legend>Types</legend>
               <ol>
-                <li><label><input type="radio" name="type" value="d"> D</label></li>
-                <li><label><input type="radio" name="type" value="p"> P</label></li>
-                <li><label><input type="radio" name="type" value="e"> E</label></li>
+                <li><label><input type="radio" name="type" value="d"> Diesel</label></li>
+                <li><label><input type="radio" name="type" value="p"> Petrol</label></li>
+                <li><label><input type="radio" name="type" value="e"> Electric</label></li>
               </ol>
             </fieldset>
           </form>
@@ -226,9 +228,9 @@
             <fieldset>
               <legend>Types</legend>
               <ol>
-                <li><label><input type="radio" name="type" value="d"> D</label></li>
-                <li><label><input type="radio" name="type" value="p"> P</label></li>
-                <li><label><input type="radio" name="type" value="e"> E</label></li>
+                <li><label><input type="radio" name="type" value="d"> Diesel</label></li>
+                <li><label><input type="radio" name="type" value="p"> Petrol</label></li>
+                <li><label><input type="radio" name="type" value="e"> Electric</label></li>
               </ol>
             </fieldset>
           </form>
@@ -263,9 +265,9 @@
             <fieldset>
               <legend>Types</legend>
               <ol>
-                <li><label><input type="radio" name="type" value="d"> D</label></li>
-                <li><label><input type="radio" name="type" value="p"> P</label></li>
-                <li><label><input type="radio" name="type" value="e"> E</label></li>
+                <li><label><input type="radio" name="type" value="d"> Diesel</label></li>
+                <li><label><input type="radio" name="type" value="p"> Petrol</label></li>
+                <li><label><input type="radio" name="type" value="e"> Electric</label></li>
               </ol>
             </fieldset>
           </form>
@@ -300,9 +302,9 @@
             <fieldset>
               <legend>Types</legend>
               <ol>
-                <li><label><input type="radio" name="type" value="d"> D</label></li>
-                <li><label><input type="radio" name="type" value="p"> P</label></li>
-                <li><label><input type="radio" name="type" value="e"> E</label></li>
+                <li><label><input type="radio" name="type" value="d"> Diesel</label></li>
+                <li><label><input type="radio" name="type" value="p"> Petrol</label></li>
+                <li><label><input type="radio" name="type" value="e"> Electric</label></li>
               </ol>
             </fieldset>
           </form>
@@ -337,9 +339,9 @@
             <fieldset>
               <legend>Types</legend>
               <ol>
-                <li><label><input type="radio" name="type" value="d"> D</label></li>
-                <li><label><input type="radio" name="type" value="p"> P</label></li>
-                <li><label><input type="radio" name="type" value="e"> E</label></li>
+                <li><label><input type="radio" name="type" value="d"> Diesel</label></li>
+                <li><label><input type="radio" name="type" value="p"> Petrol</label></li>
+                <li><label><input type="radio" name="type" value="e"> Electric</label></li>
               </ol>
             </fieldset>
           </form>
@@ -368,7 +370,7 @@
         <li><a href="#"><span class="fab fa-instagram"></span></a></li>
         <li><a href="#"><span class="fab fa-twitter"></span></a></li>
       </ul>
-      <nav aria-label="Legal">
+      <nav aria-label="Legal" class="foot-nav">
         <ul class="legal">
           <li><a href="#">Terms of Use</a></li>
           <li><a href="#">Privacy Policy</a></li>

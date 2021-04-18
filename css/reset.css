@@ -1,7 +1,7 @@
 *{
 	box-sizing: border-box;
 }
-html {
+html, body, p {
 	box-sizing: border-box;
 	--global-primary-col: #ff3366;    /* main colour */
 	--global-primary-alt: #ff6699;    /* variant */
@@ -17,9 +17,6 @@ html {
     line-height: 1em;
     border: 0;
     margin: 0;
-}
-body {
-	margin: 0;
 	color: var(--secondary-on);
 }
 
@@ -50,13 +47,13 @@ input, button {
 	margin: 0;
 	font: inherit;
 }
-/*
+
 fieldset {
 	display: flex;
 	margin: 0;
 	padding: 0;
 	border: none;
-} */
+}
 /*
 legend {
 	padding: 0;
@@ -101,13 +98,13 @@ legend.legend {
 	border-color: initial;
 	border-image: initial;
 }
-/* a, button, a:hover {
+a, button, a:hover {
     color:var(--alt-color);
     text-decoration: none;
     transition: all .25s ease;
     cursor: pointer;
 }
-h3{
+h2{
 	font-size: 2rem;
 	margin: .5em 0;
-} */
+}

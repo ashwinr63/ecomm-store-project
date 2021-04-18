@@ -1,0 +1,133 @@
+/* Note there a few "reset" styles given in reset.css. Review those before you begin */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/* The common stylesheet for the entire html pages*/
+
+/* ====Header Styling with Log */
+/* Header */
+/* Menu Options */
+
+.page-header {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr auto;
+    justify-content: center;
+    align-content: center;
+    grid-template-areas: 
+    "logo logo"
+    "your-products nav-toggle"
+    "search navigation";
+    background-color: chocolate;
+}
+.logo{
+    grid-area: logo;
+    display: inline-flex;
+    justify-self: center;
+}
+.carts {
+    grid-area: your-products;
+    display: inline;
+    font-size: 2em;
+    color: black;
+}
+
+.your-products > li {
+    display: inline;
+    color: red;
+}
+.your-products > .fa, .fas {
+color:black;
+}
+.nav-toggle {
+    grid-area: nav-toggle;
+    display: flex;
+    margin: 1em;
+    height: 40%; 
+    width: 2em;
+}
+.navigation, .search-product{
+    display: none;
+}
+/* Products */
+main {
+    display: grid;
+    padding: 0 2em 2em 2em;
+    margin-bottom: 2em;
+    background-color: darkcyan;
+}
+.results {
+    padding-top: 2em;
+    display: inline;
+}
+.pages, .iterm-properties, .iterm-properties fieldset> ol, .iterm-properties fieldset> ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.iterm-properties{
+    display: flex;
+    justify-content:flex-start;
+    margin-bottom: 1em;
+}
+.rating dd{
+    display: flex;
+    margin-left: .3em;
+}
+.rating dd p{
+    margin: 0.1em .5em 0 0;
+    color: var(--prim-text-color);
+}
+.filters {
+    justify-content: center;
+}
+.filters > .nav-toggle{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+/* --Results-- */
+.filter-options {
+    display: none;
+}
+/* Your Products */
+.products {
+    display: block;
+    border: 1.5px solid black;
+    margin-bottom: 3em;
+}
+/* Pagination */
+
+.pages {
+    display: flex;
+    justify-content: center;
+}
+
+.pages > li {
+    margin: calc(var(--pad-and-gap)/2);
+    
+}
+
+/* page footer */
+.page-footer {
+    background-color: var(--secondary-col);
+    /* margin: 0 -1em -1em -1em; */
+    padding: 2em;
+}
+
+.social {
+    display: flex;
+    justify-content: flex-end;
+    margin: auto;
+    padding: auto;
+    list-style-type: disc;
+}
+.foot-nav {
+    text-align: center;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid var(--secondary-alt);
+}
+/* copyright */
+.copyright {
+    text-align: right;
+}
