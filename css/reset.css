@@ -1,7 +1,7 @@
 *{
 	box-sizing: border-box;
 }
-html, body, p {
+html, body {
 	box-sizing: border-box;
 	--global-primary-col: #ff3366;    /* main colour */
 	--global-primary-alt: #ff6699;    /* variant */
@@ -17,8 +17,7 @@ html, body, p {
     line-height: 1em;
     border: 0;
     margin: 0;
-	color: var(--secondary-on);
-	overflow-y: scroll;
+	color: var(--primary-col);
 }
 
 p {
@@ -100,7 +99,7 @@ legend.legend {
 	border-image: initial;
 }
 a, button, a:hover {
-    color:var(--alt-color);
+    color:var(--primary-col);
     text-decoration: none;
     transition: all .25s ease;
     cursor: pointer;
