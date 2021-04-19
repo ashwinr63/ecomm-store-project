@@ -157,13 +157,16 @@ color:black;
     body{
         background: linear-gradient(rgba(0 , 0 , 5, 2), rgba(0 , 0 , 5, 2));
     }
+    .page-header > .search > .fa {
+        display: inline-flex;
+    }
     .products {
         display: grid;
         grid-template-columns: 15em auto;
         grid-template-rows: auto;
         grid-template-areas: 
         "heading heading"
-        "filters results"
+        "results results"
         "pagination pagination";
         width: 100%;
         grid-gap: var(--pad-and-gap); 
@@ -180,14 +183,33 @@ color:black;
         flex-direction: column;
         flex-wrap: wrap;
     }
+    .filters-main {
+        display: flex;
+        justify-self: top;
+    }
     .filters > h2{
-        text-align: center;
+        text-align: top;
+        
     }
     .results{
         grid-area: results;
+        display: block;
+        justify-items: right;
+        align-content: right;
     }
     .filters > .nav-toggle {
+
         display: block;
+
+    }
+    .pagination {
+        grid-area: pagination;
+        display: flex;
+        align-items: center;
+    }
+    .pages {
+        display: flex;
+        font-size:20px;
 
     }
 }
@@ -222,34 +244,48 @@ color:black;
         display: inline-flex;
         justify-self: left; 
     }
-    .carts {
-        grid-area: your-product;
-        display: inline;
-        font-size: 50px;
-    }
     .your-products {
-        grid-area: your-product;
+        grid-area: your-products;
+        justify-content: right;
         align-self:right;
     }
-    .navigation {
+
+    .nav-toggle {
+        display: none;
+    }
+    .navigation ,a {
         grid-area: navigation;
-        display: inline-flex;
-        justify-content: center;
-        align-self:baseline ;
-        font-size: 30px;
+        display: inline-block;
+        justify-content:center;
+        align-items:center;
+        font-size: 20 px;
         
     }
-    .navigation > ul, li {
-        display: inline-flex;
+    .menu {
+        display: flex;
         grid-area: navigation;
-        justify-self: space-between;
+        justify-content: space-around;
+        justify-items: center;
     }
-    .menu > li {
+    .submenu {
         grid-area: navigation;
-        display: inline-flex;
-        justify-content: space-evenly;
+        display: none;
+        justify-content: space-around;
         align-content: center;
     }
+    .submenu > li a{
+        justify-content: space-around;
+        text-rendering: optimizeSpeed;
+
+    }
+    .navigation ul li:hover ul,
+    .navigation ul li.hover u{
+        display: flex;
+        font-size: 1.1rem;
+        font-weight: normal;
+        line-height: 1.4rem;
+    }
+
     /* Main product */
     .products {
         display: grid;
