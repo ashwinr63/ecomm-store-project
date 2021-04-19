@@ -38,12 +38,11 @@
       </nav>
       <div class="search-product">
       <!-- Search for a product (non-functional) -->
-      
       <form class="search">
         <label>Search
           <input type="search" name="find" id="find">
         </label>
-        <button type="button"><span class="fa fa-search fa-2x"></span></button>
+        <button type="button"><span class="fa fa-search"></span></button>
       </form>
       </div>
         <!-- Additional links -->
@@ -60,70 +59,72 @@
 
       <!-- Filtering product form -->
       <form class="filters">
-        <h2>Filters</h2>
-        <button type="button" class="nav-toggle">
-          <span class="fa fa-bars" aria-hidden="true"></span>
-        </button>
-        <div class="filter-options">
+        <div class="filters-main">
+          <h2>Filters</h2>
+          <button type="button" class="nav-toggle">
+            <span class="fa fa-bars" aria-hidden="true"></span>
+          </button>
+          <div class="filter-options">
           
-          <fieldset>
-            <legend>Colour</legend>
-            <ul class="filter-list">
-              <li><input type="checkbox" name="colour" value="black" id="black"> <label for="black">Black</label></li>
-              <li><input type="checkbox" name="colour" value="white" id="white"> <label for="white">White</label></li>
-              <li><input type="checkbox" name="colour" value="grey" id="grey"> <label for="grey">Grey</label></li>
-              <li><input type="checkbox" name="colour" value="red" id="red"> <label for="red">Red</label></li>
-              <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li>
-            </ul>
-          </fieldset>
-          <fieldset>
-            <legend>Types</legend>
-            <ol class="filter-list">
-              <li><input type="checkbox" name="size" value="xs" id="xs"> <label for="xs">Petrol</label></li>
-              <li><input type="checkbox" name="size" value="sm" id="sm"> <label for="sm">Diesel</label></li>
-              <li><input type="checkbox" name="size" value="md" id="md"> <label for="md">Hydrogen</label></li>
-              <li><input type="checkbox" name="size" value="lg" id="lg"> <label for="lg">Hybrid</label></li>
-              <li><input type="checkbox" name="size" value="xl" id="xl"> <label for="xl">Electric</label></li>
-            </ol>
-          </fieldset>
-          <fieldset>
-            <legend>Ratings (above)</legend>
-            <ol class="filter-list">
-              <li>
-                <input type="radio" name="rating" value="4" id="aboveFour">
-                <label for="aboveFour">
-                  <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="far fa-star"></span>
-                </label>
-              </li>
-              <li>
-                <input type="radio" name="rating" value="3" id="aboveThree">
-                <label for="aboveThree">
-                  <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="far fa-star"></span><span class="far fa-star"></span>
-                </label>
-              </li>
-              <li>
-                <input type="radio" name="rating" value="2" id="aboveTwo">
-                <label for="aboveTwo">
-                  <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="far fa-star"></span><span class="far fa-star"></span><span class="far fa-star"></span>
-                </label>
-              </li>
-              <li>
-                <input type="radio" name="rating" value="1" id="aboveOne">
-                <label for="aboveOne">
-                  <span class="fas fa-star"></span><span class="far fa-star"></span><span class="far fa-star"></span><span class="far fa-star"></span><span class="far fa-star"></span>
-                </label>
-              </li>
-            </ol>
-          </fieldset>
-        <fieldset>
-          <label for="sort">Show</label>
-          <select name="sort" id="sort">
-            <option value="price-high">Price, highest to lowest</option>
-            <option value="price-low">Price, lowest to highest</option>
-            <option value="latest">Latest Arrivals</option>
-          </select>
-        </fieldset>
-      </div>
+            <fieldset>
+              <legend>Colour</legend>
+              <ul class="filter-list">
+                <li><input type="checkbox" name="colour" value="black" id="black"> <label for="black">Black</label></li>
+                <li><input type="checkbox" name="colour" value="white" id="white"> <label for="white">White</label></li>
+                <li><input type="checkbox" name="colour" value="grey" id="grey"> <label for="grey">Grey</label></li>
+                <li><input type="checkbox" name="colour" value="red" id="red"> <label for="red">Red</label></li>
+                <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Types</legend>
+              <ol class="filter-list">
+                <li><input type="checkbox" name="size" value="xs" id="xs"> <label for="xs">Petrol</label></li>
+                <li><input type="checkbox" name="size" value="sm" id="sm"> <label for="sm">Diesel</label></li>
+                <li><input type="checkbox" name="size" value="md" id="md"> <label for="md">Hydrogen</label></li>
+                <li><input type="checkbox" name="size" value="lg" id="lg"> <label for="lg">Hybrid</label></li>
+                <li><input type="checkbox" name="size" value="xl" id="xl"> <label for="xl">Electric</label></li>
+              </ol>
+            </fieldset>
+            <fieldset>
+              <legend>Ratings (above)</legend>
+              <ol class="filter-list">
+                <li>
+                  <input type="radio" name="rating" value="4" id="aboveFour">
+                  <label for="aboveFour">
+                    <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="far fa-star"></span>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="rating" value="3" id="aboveThree">
+                  <label for="aboveThree">
+                    <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="far fa-star"></span><span class="far fa-star"></span>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="rating" value="2" id="aboveTwo">
+                  <label for="aboveTwo">
+                    <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="far fa-star"></span><span class="far fa-star"></span><span class="far fa-star"></span>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="rating" value="1" id="aboveOne">
+                  <label for="aboveOne">
+                    <span class="fas fa-star"></span><span class="far fa-star"></span><span class="far fa-star"></span><span class="far fa-star"></span><span class="far fa-star"></span>
+                  </label>
+                </li>
+              </ol>
+            </fieldset> 
+        </div>
+        </div>
+      <fieldset class="sort-by">
+        <label for="sort">Show</label>
+        <select name="sort" id="sort">
+          <option value="price-high">Price, highest to lowest</option>
+          <option value="price-low">Price, lowest to highest</option>
+          <option value="latest">Latest Arrivals</option>
+        </select>
+      </fieldset>
       </form>
 
       <section class="results">
