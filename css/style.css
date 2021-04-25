@@ -53,6 +53,15 @@ color:black;
     flex-direction: column;
     background-color: var(--primary-col);
 }
+.color {
+    display: none;
+}
+.types {
+    display: none;
+}
+.ratings {
+    display: none;
+}
 .results {
     /* padding-top: 2em; */
     display: inline-block;
