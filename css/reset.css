@@ -1,33 +1,29 @@
 *{
 	box-sizing: border-box;
 }
-html, body {
+html, body , p{
 	box-sizing: border-box;
-	--global-primary-col: #ff3366;    /* main colour */
-	--global-primary-alt: #ff6699;    /* variant */
-	--primary-col: #ffffff;
-    --primary-alt: #298231;   /* for text or icons */
-	--secondary-col: #3399ff;
-	--secondary-alt: #99ccff;
+	--global-primary-col: #29362D;    /* main colour */
+	--global-primary-alt: #B5919A;    /* variant */
+	--primary-col: #5C7865;
+    --primary-alt: #8BB598;   /* for text or icons */
+	--secondary-col: #A7D9B6;
+	--secondary-alt: #BCF5CD;
 	--secondary-on: #000000;
     --btn-color: #669715;
 	/* etc, etc... */
     --pad-and-gap: 1em;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+    line-height: 1.5rem;
     border: 0;
     margin: 0;
-	color: var(--primary-col);
-}
-
-p {
-	font-family: 'Montserrat', sans-serif;
 	color: var(--secondary-on);
 }
 
 /* Preview each of these suggested resets before beginning your project styling */
 
-img , object, embed{
+img, object{
 	max-width: 100%;
 	height: auto;
 	vertical-align: auto;
@@ -99,12 +95,12 @@ legend.legend {
 	border-image: initial;
 }
 a, button, a:hover {
-    color:var(--primary-col);
+    color:var(--secondary-on);
     text-decoration: none;
     transition: all .25s ease;
     cursor: pointer;
 }
 h2{
-	font-size: 2rem;
+	font-size: 3rem;
 	margin: .5em 0;
 }

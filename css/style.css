@@ -1,7 +1,6 @@
 /* Note there a few "reset" styles given in reset.css. Review those before you begin */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-/* The common stylesheet for the entire html pages*/
 
+/* The common stylesheet for the entire html pages*/
 /* ====Header Styling with Log */
 /* Header */
 /* Menu Options */
@@ -12,7 +11,7 @@
     grid-template-columns: 1fr 2fr 1fr;
     justify-content: center;
     align-items: center;
-    background-color: chocolate;
+    background-color: var(--global-primary-col);
     padding: 1em 0;
 }
 .logo{
@@ -26,7 +25,7 @@
 }
 .your-products > li {
     grid-area: 1/1/2/2;
-    color: #030303;
+    color: var(--global-primary-alt);
     padding: 0 0.5rem;
 }
 .your-products > .fa, .fas {
@@ -52,15 +51,14 @@ color:black;
 .products {
     display: flex;
     flex-direction: column;
-    background-color: darkcyan;
+    background-color: var(--primary-col);
 }
 .results {
     /* padding-top: 2em; */
     display: inline-block;
 }
 .pages, fieldset> ol, fieldset> ul{
-    display: flex;
-    flex-wrap: wrap;
+    display: inline-block;
     gap: 1em;
 }
 
@@ -70,7 +68,7 @@ color:black;
 }
 .rating dd p{
     margin: 0.1em .5em 0 0;
-    color: var(--prim-text-color);
+    color: var(--secondary-alt);
 }
 .filters {
     display: flex;
@@ -99,7 +97,7 @@ color:black;
 /* Your Products */
 .product {
     display: block;
-    border: 1.5px solid black;
+    border: 1.5px solid var(--secondary-on);
     margin-bottom: 3em;
 }
 .product > header > img{
@@ -148,11 +146,70 @@ color:black;
 .copyright {
     text-align: right;
 }
-
+.desc {
+    display: grid;
+    grid-template-areas: 
+    "gallery"
+    "prod"
+    "product-description";
+    /* background-color: var(--secondary-alt); */
+}
+.gallery {
+    grid-area: gallery;
+    display: inline-flex;
+    justify-content: center;
+  }
+  .bigimg {
+    display: flex;
+    width: 100%;
+  }
+  .thumbnail {
+      grid-area: gallery;
+      display: inline-flex;
+      width: 33.3%;
+  }
+  .prod {
+      grid-area: prod;
+      display: flex;
+      background-color: var(--global-primary-alt);
+      justify-content: center;
+      padding: -10em;
+  }
+  .prod > del, ins {
+    padding-left: 1.2em;
+  }
+  .prod > data {
+      color: var(--primary-col);
+      display: flex;
+      justify-content: space-evenly;
+  }
+  .prod > dl dt{
+      display: flex;
+      color: var(--primary-col);
+      justify-content: center;
+  }
+  .prod span {
+      display: inline-flex;
+      color: var(--primary-col); 
+  }
+  .product-description {
+      grid-area: product-description;
+      background-color: var(--global-primary-alt);
+      color: var(--secondary-on);
+  }
+  .product-description span h2{
+      display: block;
+      color: var(--secondary-on);
+  }
+  .product-description > p{
+        justify-content: center;
+        text-align: justify;
+        color: var(--secondary-on);
+  }
 
 /* Starting media Queries */
 
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 550px) {
     body{
         background: linear-gradient(rgba(0 , 0 , 5, 2), rgba(0 , 0 , 5, 2));
     }
@@ -160,27 +217,35 @@ color:black;
         display: inline-flex;
     }
     .products {
-        display: grid;
-        grid-template-columns: 15em auto;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "heading heading"
-        "results results"
-        "pagination pagination";
-        width: 100%;
-        grid-gap: var(--pad-and-gap); 
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 0 2em;
     }
 
-    .heading {
-        grid-area: heading;
+    .heading, .subheading {
         text-align: center;
     }
-    
+    .product {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2em;
+        border-bottom: 2px solid var(--secondary-on);
+        padding: 0 0 1.5em 0;
+    }
+    .product > header > dl{
+        display: flex;
+        flex-direction: column;
+       
+    }
     .filters {
         grid-area: filters;
         display: inline-flex;
         flex-direction: column;
         flex-wrap: wrap;
+    }
+    .filters > .nav-toggle {
+        display: block;
     }
     .filters-main {
         display: flex;
@@ -188,7 +253,15 @@ color:black;
     }
     .filters > h2{
         text-align: top;
-        
+    }
+    .color {
+        display: none;
+    }
+    .types {
+        display: none;
+    }
+    .ratings {
+        display: none;
     }
     .results{
         grid-area: results;
@@ -196,9 +269,7 @@ color:black;
         justify-items: right;
         align-content: right;
     }
-    .filters > .nav-toggle {
-        display: block;
-    }
+   
     .pagination {
         grid-area: pagination;
         display: flex;
@@ -208,32 +279,70 @@ color:black;
         display: flex;
         font-size:20px;
     }
-    .gallery {
+    .desc {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        max-width: 40em;
-        margin: 0 auto;
-        grid-gap: 1em;
-        background-color: #E1E8EE;
+        grid-template-areas: 
+        "gallery"
+        "prod"
+        "product-description";
+        /* background-color: var(--secondary-alt); */
+    }
+    .gallery {
+        grid-area: gallery;
+        display: inline-flex;
+        justify-content: center;
       }
       .bigimg {
-        grid-column: span 1;
+        display: flex;
+        width: 100%;
       }
       .thumbnail {
+          grid-area: gallery;
+          display: inline-flex;
+          width: 33.3%;
+      }
+      .prod {
+          grid-area: prod;
           display: flex;
-          width: 100%;
+          background-color: var(--global-primary-alt);
+          justify-content: center;
+          padding: -10em;
+      }
+      .prod > del, ins {
+        padding-left: 1.2em;
+      }
+      .prod > data {
+          color: var(--primary-col);
+          display: flex;
+          justify-content: space-evenly;
+      }
+      .prod > dl dt{
+          display: flex;
+          color: var(--primary-col);
+          justify-content: center;
+      }
+      .prod span {
+          display: inline-flex;
+          color: var(--primary-col); 
       }
       .product-description {
-          display: block;
-
+          grid-area: product-description;
+          background-color: var(--global-primary-alt);
+          color: var(--secondary-on);
       }
+      .product-description span h2{
+          display: block;
+          color: var(--secondary-on);
+      }
+      .product-description > p{
+            justify-content: center;
+            text-align: justify;
+            color: var(--secondary-on);
+      }
+
 }
 
-@media only screen and (min-width: 70em) {
-    body{
-        background: linear-gradient(rgba(0 , 0 , 5, 2), rgba(0 , 0 , 5, 2));
-    }
-
+@media only screen and (min-width: 900px) {
     .page-header {
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
@@ -305,47 +414,80 @@ color:black;
     /* Main product */
     .products {
         display: grid;
+        grid-template-columns: 1fr 2fr;
         grid-template-areas:
         "heading heading" 
         "filter results"
         "pagination pagination";
     }
+    
     .filters {
         grid-area: filter;
-        display: inline-flex;
+        display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
+        justify-content: flex-start;
+        line-height: 2rem;
     }
-
+    .filters-main {
+        display: grid;
+        grid-template-areas: 
+        "heading"
+        "colors"
+        "types"
+        "ratings"
+        "sort" ;
+        
+    }
     .filters-main > h2 {
-        display: block;
-
+        grid-area: heading;
+        display: inline;
+        margin: 1.5em;
+        font-size: 40px;
+    }
+    .color {
+        display: grid;
+        grid-area: colors;
+        font-size: 1.5em;
+        padding: .5em;
+        border: 1px solid black;
+    }
+    .types {
+        display: grid;
+        grid-area: types;
+        padding: 1em;
+        border: 1px solid black;
+    }
+    .ratings {
+        grid-area: ratings;
+        display: grid;
+        padding: 1em;
+        border: 1px solid black;
+    }
+    .sort-by {
+        grid-area: sort;
+        padding: 2em;
     }
     .filters-main > .nav-toggle {
         display: none;
     }
-    .filters-main {
-        display: flex;
-        justify-content: left;
-        align-content: top;
-        box-sizing: border-box;
-        border: solid black 1px;
-    }
     .filter-options {
-        display: block;
+        display: flex;
     }
     .filter-options > .filter-list {
         display: flex;
-        border: #030303 solid 2px;
+        border: var(--secondary-alt) solid 2px;
     }
     .filter-list > li {
         display: flex;
+        align-items: flex-start;
         flex-direction: row-reverse;
         flex-wrap: wrap-reverse;
     }
     .results { 
         grid-area: results;
         display: block;
+        margin: 2em;
+        color: var(--secondary-on);
     }
     .pagination {
         grid-area: pagination;
@@ -358,7 +500,7 @@ color:black;
         grid-template-areas: 
         "gallery prod"
         "gallery product-description ";
-        background-color: white;
+        /* background-color: var(--secondary-alt); */
     }
     .gallery {
         grid-area: gallery;
@@ -376,37 +518,41 @@ color:black;
       }
       .prod {
           grid-area: prod;
-          display: block;
-          color: black; 
+          display: flex;
+          background-color: var(--global-primary-alt);
           justify-content: center;
+          padding: -10em;
+      }
+      .prod > del, ins {
+        padding-left: 1.2em;
       }
       .prod > data {
-          color: black;
+          color: var(--primary-col);
           display: flex;
-          justify-content: center;
+          justify-content: space-evenly;
       }
       .prod > dl dt{
           display: flex;
-          color: black;
+          color: var(--primary-col);
           justify-content: center;
       }
       .prod span {
           display: inline-flex;
-          color: blue;  
+          color: var(--primary-col); 
       }
       .product-description {
           grid-area: product-description;
-          
-          color: black;
+          background-color: var(--global-primary-alt);
+          color: var(--secondary-on);
       }
       .product-description span h2{
           display: block;
-          color: black;
+          color: var(--secondary-on);
       }
       .product-description > p{
             justify-content: center;
             text-align: justify;
-            color: black;
+            color: var(--secondary-on);
       }
 
 }
