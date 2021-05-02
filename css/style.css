@@ -42,8 +42,22 @@ color:black;
     width: 2em;
     height: 1.5em;
 }
-.navigation, .search-product{
-    display: none;
+.navigation{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position:absolute;
+    top: -900px;
+    z-index: -10;
+}
+.search-product {
+    display: block;
+}
+.navigation.active {
+    background-color: var(--secondary-on);
+    top: 0px;
+    z-index: 10;
+    height: 50vh;
 }
 /* HEADER ENDS*/
 /* ------------------------------------------------------------------------- */
