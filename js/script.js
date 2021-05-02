@@ -83,11 +83,34 @@ const prodTable = function(prod_array) {
     prod_array.array.forEach(prod => {
         
         //creating article for each element
-        const art_item = document.createElement(`article`)
+        const art_item = document.createElement(`article`);
         const art_type = prod.prod_type;
         const art_col = prod.prod_color;
         const art_rate = prod.prod_rate;
 
-        //filtering out 
+        //filtering out types 
+        let a_type = [];
+        art_type.forEach((typ) => {
+            a_type += `<li><label><input type="radio" name="type" value="d"> ${typ}</label></li>`;
+        });
+
+        //color values
+
+        let a_color = [];
+        art_col.forEach((col)=>{
+            a_color = `<li><label><input type="radio" name="colour" value="r"> ${col}</label></li>`;
+        });
+
+        let a_rate = []
+        for (let i =0 ; i < 5; i++) {
+            if(art_rate > x) {
+                a_rate +=`<span class="fas fa-star"></span>`;            }
+        } else {
+            a_rate += `<span class="fas fa-star-half"></span>`;
+        }
+    
     });
+
+    //Addition of product to class list
+    
 }
