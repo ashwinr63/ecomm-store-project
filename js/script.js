@@ -73,4 +73,21 @@ const ProdArr = [
 // selecting the elements of prouducts 
 
 const prod_table = document.querySelector(`.results`);
-let 
+let theProdArr = ProdArr;
+let prod_arr = [];
+
+// creating a single template for all the products
+
+const prodTable = function(prod_array) {
+    prod_table.innerHTML = ``
+    prod_array.array.forEach(prod => {
+        
+        //creating article for each element
+        const art_item = document.createElement(`article`)
+        const art_type = prod.prod_type;
+        const art_col = prod.prod_color;
+        const art_rate = prod.prod_rate;
+
+        //filtering out 
+    });
+}
