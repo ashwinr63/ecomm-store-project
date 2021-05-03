@@ -25,9 +25,9 @@
         <ul class="menu">
           <li><a href="#">Shop Cars</a>
             <ul class="submenu">
-              <li><a href="#">LowEnd</a></li>
-              <li><a href="#">MidEnd</a></li>
-              <li><a href="#">HighEnd</a></li>
+              <li><a href="#">Low</a></li>
+              <li><a href="#">Mid</a></li>
+              <li><a href="#">High</a></li>
             </ul>
           </li>
           <li><a href="#">About</a></li>
@@ -41,13 +41,14 @@
         <label>Search
           <input type="search" name="find" id="find">
         </label>
-        <button type="button"><span class="fa fa-search fa-2x"></span></button>
+        <button type="button"><span class="fa fa-search"></span></button>
       </form>
       </div>
         <!-- Additional links -->
         <ul class="your-products">
           <li><a href="#"><span class="fas fa-heart" aria-label="Favourites"></span></a></li>
           <li><a href="#"><span class="fa fas fa-shopping-cart" aria-label="Items in your cart"></span></a></li>
+          <li><a href="#"><span class="far fa-user-circle" aria-label="UserLogin"></span></a></li>
         </ul>
     </header>
     <!-- Image criteria -->
@@ -58,7 +59,7 @@
            <div class="thumbnail">
             <img src="img/honda-civic-sdn.jpg" alt="Civic-sdn" id="thumb1" class="thumb">
             <img src="img/2022-Honda-Civic.jpg" alt="2022-civic" id="thumb2" class="thumb">
-            <img src="img/Honda_Civic_1.jpg" alt="Civic_1" id="thumb3" class="thumb">
+            <img src="img/Civic_1.jpg" alt="Civic_1" id="thumb3" class="thumb">
           </div>
         </section>
       </div>
@@ -66,14 +67,37 @@
           <span>Sedan</span>
           <h2>Honda Civic</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque mollitia ipsum tempora. Perferendis voluptatem temporibus, vitae qui rerum id voluptatum reprehenderit laudantium fugit quos enim voluptas iste est soluta voluptatibus.</p>
+          <form class="filter-set">
+            <fieldset>
+              <legend>Colours</legend>
+              <ul>
+                <li><label><input type="radio" name="colour" value="r">Red</label></li>
+                <li><label><input type="radio" name="colour" value="w"> White</label></li>
+                <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Types</legend>
+              <ol>
+                <li><label><input type="radio" name="type" value="d"> Diesel</label></li>
+                <li><label><input type="radio" name="type" value="p"> Gas</label></li>
+                <li><label><input type="radio" name="type" value="e"> Electric</label></li>
+              </ol>
+            </fieldset>
+          </form>
+          <footer>
+            <button type="button"><span class="fa fas fa-shopping-cart"></span> Add to Cart</button>
+            <button type="button"><span class="fas fa-heart"></span></button>
+          </footer>      
         </div>
     <div class = "prod">
+      <h3>Price</h3>
       <data value="20k"><del>$50k</del> <ins>20K</ins></data>
       <dl>
         <dt>Rating</dt>
         <dd>4.4 <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star-half"></dd>
       </dl> 
-    </div>      
+    </div>
     </article>
    
     <!-- Product information -->
@@ -92,6 +116,6 @@
       </nav>
       <p class="copyright">&copy; Copyright, 1991.</p>
     </footer>
-
+<script src="./js/product.js"></script>
 </body>
 </html>

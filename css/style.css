@@ -328,20 +328,21 @@ color:black;
       }
       .prod > del, ins {
         padding-left: 1.2em;
+        color: var(--secondary-on);
       }
       .prod > data {
-          color: var(--primary-col);
+          color: var(--secondary-on);
           display: flex;
           justify-content: space-evenly;
       }
       .prod > dl dt{
           display: flex;
-          color: var(--primary-col);
+          color: var(--secondary-on);
           justify-content: center;
       }
       .prod span {
           display: inline-flex;
-          color: var(--primary-col); 
+          color: var(--secondary-on); 
       }
       .product-description {
           grid-area: product-description;
@@ -356,6 +357,11 @@ color:black;
             justify-content: center;
             text-align: justify;
             color: var(--secondary-on);
+      }
+      .product-description > .filter-set {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
       }
 
 }
@@ -465,7 +471,6 @@ color:black;
     .color {
         display: flex;
         flex-direction: column;
-        font-size: 1.5em;
         padding: .5em;
         border: 1px solid black;
         align-items: center;
@@ -526,12 +531,13 @@ color:black;
         justify-content: center;
         align-items: center;
     }
-    .filter-set > ul ol{
-        display: inline;
-        flex-direction: row; 
+    .filter-set > ul ol li{
+        display: flex;
+        flex-direction: column; 
     }
-    .filter-set > li {
-        display: inline;
+
+    .filter-set > label {
+        display: flex;
     }
     .pagination {
         grid-area: pagination;
