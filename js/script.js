@@ -5,8 +5,7 @@
 document.querySelector('.nav-toggle-container').addEventListener('click', openMenu);
 
 function openMenu() {
-    document.querySelector('.menu').classList.toggle('active');
-    
+    document.querySelector('.menu').classList.toggle('active');   
 }
 
 
@@ -31,7 +30,7 @@ const ProdArr = [
         prod_price: 21,
         prod_rate: 4,
         prod_type: ['Gas', 'Electric'],
-        prod_color:['Red', 'Black', 'White']
+        prod_color:['Red', 'Black', 'Blue']
     },
     {
         prod_name: 'Prod3',
@@ -51,7 +50,7 @@ const ProdArr = [
         prod_price: 23,
         prod_rate: 4,
         prod_type: ['Gas', 'Electric'],
-        prod_color:['Red', 'Black', 'White']
+        prod_color:['White', 'Black', 'Green']
     },
     {
         prod_name: 'Prod5',
@@ -61,7 +60,7 @@ const ProdArr = [
         prod_price: 20,
         prod_rate: 4,
         prod_type: ['Gas', 'Electric'],
-        prod_color:['Red', 'Black', 'White']
+        prod_color:['White', 'Black', 'Blue']
     },
     {
         prod_name: 'Prod6',
@@ -171,14 +170,25 @@ sortBy.addEventListener('click', function(event) {
     ProdArr.sort(sortByPrice);
     // console.log(ProdArr);
     prodTable(ProdArr);
-
   };
-
   if (sortBy.selectedIndex == 0) {
     hightolow(ProdArr);
   }
 });
 
+sortBy.addEventListener('click', function(event) {
+  const lowtoHigh = (ProdArr = []) => {
+    const sortByPrice = (x,y) => {
+      return x.prod_price - y.prod-price;
+     }
+     ProdArr.sort(sortByPrice);
+     // console.log(ProdArr);
+     prodTable(ProdArr);
+   };
+   if (sortBy.selectedIndex != 0) {
+    lowtoHigh(ProdArr);
+  }
+  });
 
 // const prodTable = function(prod_array) {
     
