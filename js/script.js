@@ -96,13 +96,15 @@ const prodTable = function(prodarray) {
     //Addition of product to class list
     let a_type = [];
         art_type.forEach((typ) => {
-            a_type = `<li><label><input type="radio" name="type" value="d"> ${typ}</label></li>`;
+            a_type += `<li><label><input type="radio" name="type" value="d"> ${typ}</label></li>`;
         });
+
+        console.log(a_type);
 
         //color values
         let a_color = [];
         art_col.forEach((col)=>{
-            a_color = `<li><label><input type="radio" name="colour" value="r"> ${col}</label></li>`;
+            a_color += `<li><label><input type="radio" name="colour" value="r"> ${col}</label></li>`;
         });
         //ratings
         let a_rate = [];
@@ -131,13 +133,13 @@ const prodTable = function(prodarray) {
     <fieldset>
       <legend>Colours</legend>
       <ul>
-      ${a_col}
+      ${a_color}
       </ul>
     </fieldset>
     <fieldset>
       <legend>Types</legend>
       <ol>
-       ${a_typ}
+       ${a_type}
       </ol>
     </fieldset>
   </form>

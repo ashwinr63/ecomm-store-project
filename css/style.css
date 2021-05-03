@@ -211,18 +211,18 @@ color:black;
       color: var(--primary-col); 
   }
   .product-description {
-      grid-area: product-description;
-      background-color: var(--global-primary-alt);
-      color: var(--secondary-on);
+    grid-area: product-description;
+    background-color: var(--global-primary-alt);
+    color: var(--secondary-on);
   }
   .product-description span h2{
-      display: block;
-      color: var(--secondary-on);
+    display: block;
+    color: var(--secondary-on);
   }
   .product-description > p{
-        justify-content: center;
-        text-align: justify;
-        color: var(--secondary-on);
+    justify-content: center;
+    text-align: justify;
+    color: var(--secondary-on);
   }
 
 /* Starting media Queries */
