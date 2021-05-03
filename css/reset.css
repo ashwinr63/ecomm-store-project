@@ -3,11 +3,11 @@
 }
 html, body , p{
 	box-sizing: border-box;
-	--global-primary-col: #29362D;    /* main colour */
-	--global-primary-alt: #B5919A;    /* variant */
-	--primary-col: #5C7865;
-    --primary-alt: #8BB598;   /* for text or icons */
-	--secondary-col: #A7D9B6;
+	--global-primary-col: #FBFBF2;    /* main colour */
+	--global-primary-alt: #E5E6E4;    /* variant */
+	--primary-col: #CFD2CD;
+    --primary-alt: #A6A2A2;   /* for text or icons */
+	--secondary-col: #847577;
 	--secondary-alt: #BCF5CD;
 	--secondary-on: #000000;
     --btn-color: #669715;

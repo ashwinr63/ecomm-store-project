@@ -43,12 +43,7 @@ color:black;
     height: 1.5em;
 }
 .navigation{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    position:absolute;
-    top: -900px;
-    z-index: -10;
+    display: none;
 }
 .search-product {
     display: block;
@@ -422,8 +417,8 @@ color:black;
         position: absolute;
     }
     .submenu > li a{
-        justify-content: space-around;
-        text-rendering: optimizeSpeed;
+        display: inline;
+        padding-left: 2em;
 
     }
     .navigation ul li:hover ul,
@@ -468,11 +463,14 @@ color:black;
         font-size: 40px;
     }
     .color {
-        display: grid;
-        grid-area: colors;
+        display: flex;
+        flex-direction: column;
         font-size: 1.5em;
         padding: .5em;
         border: 1px solid black;
+        align-items: center;
+        justify-content: center;
+        
     }
     .types {
         display: grid;
@@ -502,15 +500,38 @@ color:black;
     }
     .filter-list > li {
         display: flex;
-        align-items: flex-start;
-        flex-direction: row-reverse;
-        flex-wrap: wrap-reverse;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+
     }
     .results { 
         grid-area: results;
-        display: block;
+        display: inline-block;
         margin: 2em;
         color: var(--secondary-on);
+    }
+    .product {
+        display: flex;
+        border: none;
+        flex-direction: column;
+    }
+    .product > header {
+        display: inline;
+    }
+
+    .filter-set {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .filter-set > ul ol{
+        display: inline;
+        flex-direction: row; 
+    }
+    .filter-set > li {
+        display: inline;
     }
     .pagination {
         grid-area: pagination;

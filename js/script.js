@@ -1,9 +1,13 @@
 // adding the nav toggle when using the click option
-function Menu(){
-    document.querySelector(`.navigation`).classList.toggle(`active`);
-    // document.querySelector(`.nav-toggle`).classList.toggle(`active`);
-    }
-    document.querySelector(`.nav-toggle`).addEventListener(`click`, Menu);
+// document.getElementById("button").onclick = function(){
+// display: flex, display: none;
+//}
+document.querySelector('.navigation').addEventListener('click', openMenu);
+
+function openMenu() {
+    document.querySelector('.menu').classList.toggle("active");
+}
+
 
 // ==== List of Product added into the array ===== 
 
@@ -104,13 +108,48 @@ const prodTable = function(prod_array) {
         let a_rate = []
         for (let i =0 ; i < 5; i++) {
             if(art_rate > x) {
-                a_rate +=`<span class="fas fa-star"></span>`;            }
+                a_rate +=`<span class="fas fa-star"></span>`;
         } else {
             a_rate += `<span class="fas fa-star-half"></span>`;
         }
     
-    });
+    }
 
     //Addition of product to class list
-    
+    art_item.classList.add(`.product`)
+
+    art_item.innerHTML = `
+    <img src="img/${prod.prod_img}" alt="${prod.prod_name}">
+            <h3>${prod.prod_name}</h3>
+            <data value="${prod.prod_price[1]}"><del>${prod.prod_price[0]}</del> <ins>${prod.prod_price[1]}</ins></data>
+            <p>${prod.prod_desc}<a href="${prod.prod_link}">see more</a></p>
+            <dl>
+            <dt>${prod.prod_rate}</dt>
+            <dd>${a_rate}</dd>
+          </dl> 
+          <form class="filter-set">
+          <fieldset>
+            <legend>Colours</legend>
+            <ul>
+            ${a_color}
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Types</legend>
+            <ol>
+             ${a_type}
+            </ol>
+          </fieldset>
+        </form>
+        <footer>
+          <button type="button"><span class="fa fas fa-shopping-cart"></span> Add to Cart</button>
+          <button type="button"><span class="fas fa-heart"></span></button>
+        </footer>
+    `
+
+    //adding article to the result
+    prod_table.appendChild(art_item)
+})
 }
+
+// 
