@@ -1,32 +1,37 @@
-*{
+*, *::before, *::after {
 	box-sizing: border-box;
 }
-html, body , p{
+html {
+	box-sizing: border-box;
+}
+body {
 	box-sizing: border-box;
 	--global-primary-col: #FBFBF2;    /* main colour */
 	--global-primary-alt: #E5E6E4;    /* variant */
 	--primary-col: #CFD2CD;
     --primary-alt: #A6A2A2;   /* for text or icons */
-	--secondary-col: #847577;
-	--secondary-alt: #BCF5CD;
-	--secondary-on: #000000;
-    --btn-color: #669715;
+	--secondary-col: #473d3f;
+	--secondary-alt: #e9cfc0;
+	--secondary-on: #363636;
+    --btn-color: #75694e;
 	/* etc, etc... */
     --pad-and-gap: 1em;
     font-family: Arial, Helvetica, sans-serif;
-	font-size: 20px;
+	font-size: 1.2rem;
     line-height: 1.5rem;
     border: 0;
     margin: 0;
 	color: var(--secondary-on);
+	margin: 0;
 }
+
 
 /* Preview each of these suggested resets before beginning your project styling */
 
-img, object{
+img, object {
 	max-width: 100%;
 	height: auto;
-	vertical-align: auto;
+	vertical-align: bottom;
 }
 
 ul, ol, dl {
@@ -34,10 +39,10 @@ ul, ol, dl {
 	margin: 0;
 	padding: 0;
 }
-/*
+
 li > ul, li > ol {
 	padding-left: 2.5em;
-} */
+}
 
 input, button {
 	margin: 0;
@@ -50,16 +55,16 @@ fieldset {
 	padding: 0;
 	border: none;
 }
-/*
+
 legend {
 	padding: 0;
 	border: none;
-} */
+}
 
 
 /* These will make "User agent stylesheet" values (Chrome) available when needed, using classes */
 ul.ul {
-	list-style-type: disc; 	
+	list-style-type: disc;
 }
 ol.ol {
 	list-style-type: decimal;
@@ -93,14 +98,4 @@ legend.legend {
 	border-style: none;
 	border-color: initial;
 	border-image: initial;
-}
-a, button, a:hover {
-    color:var(--secondary-on);
-    text-decoration: none;
-    transition: all .25s ease;
-    cursor: pointer;
-}
-h2{
-	font-size: 3rem;
-	margin: .5em 0;
 }
