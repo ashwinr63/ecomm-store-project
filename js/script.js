@@ -74,11 +74,11 @@ const ProdArr = [
 
 // selecting the elements of prouducts 
 
-const prod_table = document.querySelectorAll(`.results`);
+const prod_table = document.querySelector(`.results`);
 
 // creating a single template for all the products
 const prodTable = function(prodarray) {
-    prod_table.innerHTML = innerHTML + `<div class='product-list'></div>`;
+    prod_table.innerHTML = ``;
     prodarray.forEach((prod) => {
         
         //creating article for each element

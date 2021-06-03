@@ -269,6 +269,16 @@
         display: none;  
     }
     
+    .color {
+        display: none;
+    }
+
+    .types {
+        display: none;
+    }
+    .ratings {
+        display: none;
+    }
     .filter-list {
         gap: 0.5rem;
     }
