@@ -7,8 +7,6 @@ document.querySelector('.nav-toggle-container').addEventListener('click', openMe
 function openMenu() {
     document.querySelector('.menu').classList.toggle('active');   
 }
-
-
 // ==== List of Product added into the array ===== 
 
 const ProdArr = [
@@ -19,7 +17,7 @@ const ProdArr = [
         prod_desc: 'Here is a shot of this product that might entice a user to click and add it to their cart',
         prod_price: 20,
         prod_rate: 4,
-        prod_type: ['Gas', 'Electric'],
+        prod_type: ['Diesel','Gas', 'Electric'],
         prod_color:['Red', 'Black', 'White']
     },
     {
@@ -29,7 +27,7 @@ const ProdArr = [
         prod_desc: 'Here is a shot of this product that might entice a user to click and add it to their cart',
         prod_price: 21,
         prod_rate: 4,
-        prod_type: ['Gas', 'Electric'],
+        prod_type: ['Diesel','Gas', 'Electric'],
         prod_color:['Red', 'Black', 'Blue']
     },
     {
@@ -39,7 +37,7 @@ const ProdArr = [
         prod_desc: 'Here is a shot of this product that might entice a user to click and add it to their cart',
         prod_price: 22,
         prod_rate: 4,
-        prod_type: ['Gas', 'Electric'],
+        prod_type: ['Diesel','Gas', 'Electric'],
         prod_color:['Red', 'Black', 'White']
     },
     {
@@ -49,7 +47,7 @@ const ProdArr = [
         prod_desc: 'Here is a shot of this product that might entice a user to click and add it to their cart',
         prod_price: 23,
         prod_rate: 4,
-        prod_type: ['Gas', 'Electric'],
+        prod_type: ['Diesel','Gas', 'Electric'],
         prod_color:['White', 'Black', 'Green']
     },
     {
@@ -59,7 +57,7 @@ const ProdArr = [
         prod_desc: 'Here is a shot of this product that might entice a user to click and add it to their cart',
         prod_price: 20,
         prod_rate: 4,
-        prod_type: ['Gas', 'Electric'],
+        prod_type: ['Diesel','Gas', 'Electric'],
         prod_color:['White', 'Black', 'Blue']
     },
     {
@@ -69,19 +67,18 @@ const ProdArr = [
         prod_desc: 'Here is a shot of this product that might entice a user to click and add it to their cart',
         prod_price: 29,
         prod_rate: 4,
-        prod_type: ['Gas', 'Electric'],
+        prod_type: ['Diesel','Gas', 'Electric'],
         prod_color:['Red', 'Black', 'White']
     }
 ];
 
 // selecting the elements of prouducts 
 
-const prod_table = document.querySelector(`.results`);
-
+const prod_table = document.querySelectorAll(`.results`);
 
 // creating a single template for all the products
 const prodTable = function(prodarray) {
-    prod_table.innerHTML = ``;
+    prod_table.innerHTML = innerHTML + `<div class='product-list'></div>`;
     prodarray.forEach((prod) => {
         
         //creating article for each element
@@ -109,44 +106,43 @@ const prodTable = function(prodarray) {
         let a_rate = [];
         for (let i =0 ; i < 5; i++) {
             if(art_rate > i) {
-                a_rate +=`<span class="fas fa-star"></span>`;
+                a_rate +=`<span class="material-icons">star</span>`;
         } else {
-            a_rate += `<span class="fas fa-star-half"></span>`;
+            a_rate += `<span class="material-icons">star_half</span>`;
         }
-    
     }
     // art_item.classList.add(`.product`);
-
     art_item.innerHTML = `
+    
     <header>
-    <img src="img/${prod.prod_img}" alt="Product Image">
-    <h3><a href="./product.html"></a>${prod.prod_name}</h3>
+    <img src="img/${prod.prod_img}" alt="Product Image" class="img-class">
+    <h3><a href="${prod.prod_link}"></a>${prod.prod_name}</h3>
     <data value="${prod.prod_price}"><del>22</del> <ins>${prod.prod_price}</ins></data>
-    <p>${prod.prod_desc}.<a href="./product.html">see more</a></p>
+    <p>${prod.prod_desc}.<a href="${prod.prod_link}">see more</a></p>
     <dl>
       <dt>Rating</dt>
       <dd>4.4 ${a_rate}</dd>
-    </dl> 
-  </header>
-  <form class="filter-set">
-    <fieldset>
-      <legend>Colours</legend>
-      <ul>
-      ${a_color}
+    </dl>  
+    </header>
+    <form class="product-filter">
+      <fieldset class="field-list">
+        <legend>Colours</legend>
+        <ul>
+        ${a_color}
       </ul>
     </fieldset>
-    <fieldset>
+    <fieldset class="field-list">
       <legend>Types</legend>
       <ol>
        ${a_type}
-      </ol>
+       </ol>
     </fieldset>
   </form>
   <footer>
-    <button type="button"><span class="fa fas fa-shopping-cart"></span> Add to Cart</button>
-    <button type="button"><span class="fas fa-heart"></span></button>
+  <button type="button"><span class="material-icons">add_shopping_cart</span></button>
+              <button type="button"><span class="material-icons">favorite</span></button>
   </footer>
-    `;
+  `;
 
     //adding article to the result
     prod_table.appendChild(art_item);
@@ -156,7 +152,6 @@ const prodTable = function(prodarray) {
 };
 
 const sortBy = document.querySelector('#sort');
-
 
 sortBy.addEventListener('click', function(event) {
   
@@ -180,7 +175,7 @@ sortBy.addEventListener('click', function(event) {
   const lowtoHigh = (ProdArr = []) => {
     const sortByPrice = (x,y) => {
       return x.prod_price - y.prod-price;
-     }
+     };
      ProdArr.sort(sortByPrice);
      // console.log(ProdArr);
      prodTable(ProdArr);

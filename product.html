@@ -6,9 +6,11 @@
     <title>Car Store</title>
     <meta name="description" content="[A short description of this site for SEO]">
     <meta name="author" content="Ashwin">
+    <link rel="stylesheet" href="css/product.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    
   </head>
   <body>
     <header class="page-header">
@@ -36,7 +38,6 @@
       </nav>
       <div class="search-product">
       <!-- Search for a product (non-functional) -->
-      
       <form class="search">
         <label>Search
           <input type="search" name="find" id="find">
@@ -52,23 +53,22 @@
         </ul>
     </header>
     <!-- Image criteria -->
-    <article class = "desc">
+    <main class = "prod-desc">
       <div class="gallery" id="gallery">
         <section class="img">
           <img src="img/Civic_1.jpg" alt="Civic" class="bigimg" id="bigimg">
-           <div class="thumbnail">
-            <img src="img/honda-civic-sdn.jpg" alt="Civic-sdn" id="thumb1" class="thumb">
-            <img src="img/2022-Honda-Civic.jpg" alt="2022-civic" id="thumb2" class="thumb">
-            <img src="img/Civic_1.jpg" alt="Civic_1" id="thumb3" class="thumb">
-          </div>
+          <div class="thumbnail">
+          <img src="img/honda-civic-sdn.jpg" alt="Civic-sdn" id="thumb1" class="thumb">
+          <img src="img/2022-Honda-Civic.jpg" alt="2022-civic" id="thumb2" class="thumb">
+          <img src="img/Civic_1.jpg" alt="Civic_1" id="thumb3" class="thumb">
+        </div>
         </section>
       </div>
         <div class="product-description">
-          <span>Sedan</span>
-          <h2>Honda Civic</h2>
+          <h3>Honda Civic</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque mollitia ipsum tempora. Perferendis voluptatem temporibus, vitae qui rerum id voluptatum reprehenderit laudantium fugit quos enim voluptas iste est soluta voluptatibus.</p>
           <form class="filter-set">
-            <fieldset>
+            <fieldset class="field-list">
               <legend>Colours</legend>
               <ul>
                 <li><label><input type="radio" name="colour" value="r">Red</label></li>
@@ -76,7 +76,7 @@
                 <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
               </ul>
             </fieldset>
-            <fieldset>
+            <fieldset class="field-list">
               <legend>Types</legend>
               <ol>
                 <li><label><input type="radio" name="type" value="d"> Diesel</label></li>
@@ -90,15 +90,14 @@
             <button type="button"><span class="fas fa-heart"></span></button>
           </footer>      
         </div>
-    <div class = "prod">
-      <h3>Price</h3>
+     <div class = "prod">
       <data value="20k"><del>$50k</del> <ins>20K</ins></data>
       <dl>
         <dt>Rating</dt>
         <dd>4.4 <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star-half"></dd>
       </dl> 
     </div>
-    </article>
+  </main>
    
     <!-- Product information -->
     <footer class="page-footer">

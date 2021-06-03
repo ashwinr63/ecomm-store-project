@@ -19,7 +19,6 @@ const setThumb = function (event) {
     }
   
   }
-  
   // Listen to the entire gallery for a click
   theGallery.addEventListener(`click`, setThumb);
   
