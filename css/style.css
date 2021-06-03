@@ -335,12 +335,18 @@
     .filter-button {
         display: none;
     }
-
-    .product-list {
+    .results {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 2rem;
+        padding: 0 0.5em;
+    }
+    /* .product-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
         gap: 3rem;
         padding: 0 0.8em;
-    }
+    } */
 }
