@@ -1,43 +1,28 @@
 /* Note there a few "reset" styles given in reset.css. Review those before you begin */
 
 /* ======Page Header======== */
-@media only screen and (min-width: 401px){
+@media only screen and (min-width: 451px){
     .page-header{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-        'search search search'
-        'nav-toggle logo your-products';
-        gap: 2rem 2rem;
-        background-blend-mode: multiply;
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
+        align-items: center;  
+        padding: 10px 15px;  
+        background-color: var(--global-primary-alt);
     }
     /* search */
     .search {
-        grid-area: search;
         display: flex;
         /* margin-left: 2rem; */
         align-items: center;
         justify-content: center;
-    
     }
-    .search > label {
-       display: flex;
-       align-items: center;
-       justify-content: center;
+    .search input[type="search"] {
+        display: none;
     }
-    
-    .search > button {
-        display: flex;
-        height: 1.9rem;
-        align-self: center;
-    }    
     /* nav-toggle */
     .nav-toggle {
-        grid-area: nav-toggle;
-        margin-left: 1.8em;
-        width: 3em;
-        height: 3em;
+        display: flex;
         align-self: center;
     }
     .navigation {
@@ -45,18 +30,11 @@
     }
     /* logo */
     .logo {
-        grid-area: logo;
-        justify-content: center;
-        align-items: center;
         display: flex;
+        float: inline-start;
     }
     .your-products {
-        list-style-type: none;
         display: flex;
-        flex-wrap: wrap;
-        gap: 1.8em;
-        justify-self: center;
-        align-self: center;
         
     }
      /*===========Main Class ============== */
@@ -184,7 +162,7 @@
      }
 }
 /*=============== Mobile view=============== */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
     body{
         box-sizing: border-box;
     }
@@ -322,7 +300,7 @@
     }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 850px) {
     .page-header {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;

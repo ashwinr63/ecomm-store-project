@@ -74,7 +74,7 @@ const ProdArr = [
 
 // selecting the elements of prouducts 
 
-const prod_table = document.querySelector(`.results`);
+const prod_table = document.querySelector(`results`);
 
 // creating a single template for all the products
 const prodTable = function(prodarray) {
@@ -113,7 +113,6 @@ const prodTable = function(prodarray) {
     }
     // art_item.classList.add(`.product`);
     art_item.innerHTML = `
-    <h2 class="subheading">Results</h2>
     <header>
     <img src="img/${prod.prod_img}" alt="Product Image" class="img-class">
     <h3><a href="${prod.prod_link}"></a>${prod.prod_name}</h3>
@@ -142,7 +141,7 @@ const prodTable = function(prodarray) {
   <button type="button"><span class="material-icons">add_shopping_cart</span></button>
    <button type="button"><span class="material-icons">favorite</span></button>
   </footer>
-  `;
+  `
 
     //adding article to the result
     prod_table.appendChild(art_item);
